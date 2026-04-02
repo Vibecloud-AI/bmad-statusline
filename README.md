@@ -5,6 +5,7 @@ BMAD workflow status tracking for [Claude Code](https://claude.ai/code) — disp
 ## Prerequisites
 
 - Node.js >= 20
+- [BMAD](https://bmadcode.github.io/BMAD-METHOD/) >= 6.2.2
 - [ccstatusline](https://github.com/nicobailon/ccstatusline) >= 2.2
 
 ## Installation
