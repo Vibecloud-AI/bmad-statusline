@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "lines": [
+    [
+      {
+        "id": "bmad-line-0",
+        "type": "custom-command",
+        "commandPath": "node \"/path/to/reader.js\" line 0",
+        "preserveColors": true
+      }
+    ],
+    [],
+    []
+  ]
+}

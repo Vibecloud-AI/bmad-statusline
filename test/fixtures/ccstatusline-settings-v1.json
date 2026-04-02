@@ -1,0 +1,49 @@
+{
+  "version": 3,
+  "lines": [
+    [],
+    [
+      {
+        "id": "bmad-project",
+        "type": "custom-command",
+        "commandPath": "node \"/path/to/reader.js\" project",
+        "color": "cyan",
+        "preserveColors": true
+      },
+      {
+        "id": "sep-bmad-1",
+        "type": "separator"
+      },
+      {
+        "id": "bmad-workflow",
+        "type": "custom-command",
+        "commandPath": "node \"/path/to/reader.js\" workflow",
+        "color": "white",
+        "preserveColors": true
+      },
+      {
+        "id": "sep-bmad-2",
+        "type": "separator"
+      },
+      {
+        "id": "bmad-progressstep",
+        "type": "custom-command",
+        "commandPath": "node \"/path/to/reader.js\" progressstep",
+        "color": "brightCyan",
+        "preserveColors": true
+      },
+      {
+        "id": "sep-bmad-3",
+        "type": "separator"
+      },
+      {
+        "id": "bmad-timer",
+        "type": "custom-command",
+        "commandPath": "node \"/path/to/reader.js\" timer",
+        "color": "brightBlack",
+        "preserveColors": true
+      }
+    ],
+    []
+  ]
+}

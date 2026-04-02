@@ -1,0 +1,64 @@
+import { describe, it } from 'node:test';
+import assert from 'node:assert';
+import { execSync } from 'node:child_process';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const CLI = path.join(__dirname, '..', 'bin', 'cli.js');
+
+function run(args = '', expectFail = false) {
+  try {
+    const stdout = execSync(`node "${CLI}" ${args}`, { encoding: 'utf8' });
+    return { stdout, exitCode: 0 };
+  } catch (err) {
+    if (expectFail) {
+      return { stdout: err.stdout || '', exitCode: err.status };
+    }
+    throw err;
+  }
+}
+
+describe('bin/cli.js', () => {
+  it('prints usage and exits 0 with --help', () => {
+    const { stdout, exitCode } = run('--help');
+    assert.strictEqual(exitCode, 0);
+    assert.ok(stdout.includes('install'));
+    assert.ok(stdout.includes('uninstall'));
+    assert.ok(stdout.includes('clean'));
+  });
+
+  it('prints usage and exits 0 with -h', () => {
+    const { stdout, exitCode } = run('-h');
+    assert.strictEqual(exitCode, 0);
+    assert.ok(stdout.includes('install'));
+  });
+
+  it('TUI module loads and exports default function', async () => {
+    const mod = await import('../src/tui/app.js');
+    assert.strictEqual(typeof mod.default, 'function');
+  });
+
+  it('prints usage and exits 1 for unknown command', () => {
+    const { stdout, exitCode } = run('foo', true);
+    assert.strictEqual(exitCode, 1);
+    assert.ok(stdout.includes('install'));
+  });
+
+  // install is tested via test/install.test.js with injected paths
+  // Running it here would modify real ~/.claude/ and ~/.config/ files
+  it('install module loads without error', async () => {
+    const mod = await import('../src/install.js');
+    assert.strictEqual(typeof mod.default, 'function');
+  });
+
+  it('uninstall module loads without error', async () => {
+    const mod = await import('../src/uninstall.js');
+    assert.strictEqual(typeof mod.default, 'function');
+  });
+
+  it('runs clean command without error', () => {
+    const { stdout, exitCode } = run('clean');
+    assert.strictEqual(exitCode, 0);
+  });
+});

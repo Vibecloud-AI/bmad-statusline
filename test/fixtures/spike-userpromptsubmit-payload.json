@@ -1,0 +1,39 @@
+{
+  "UserPromptSubmit": {
+    "session_id": "test-session-001",
+    "transcript_path": "/tmp/transcript",
+    "cwd": "C:/Users/test/project",
+    "permission_mode": "default",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "/bmad-create-architecture"
+  },
+  "PostToolUse_Read": {
+    "session_id": "test-session-001",
+    "transcript_path": "/tmp/transcript",
+    "cwd": "C:/Users/test/project",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "C:\\Users\\supervision\\Documents\\Toulou\\.claude\\skills\\bmad-create-architecture\\steps\\step-01b-continue.md"
+    },
+    "tool_response": {
+      "type": "text",
+      "file": {
+        "filePath": "C:\\Users\\supervision\\Documents\\Toulou\\.claude\\skills\\bmad-create-architecture\\steps\\step-01b-continue.md",
+        "content": "# Step 01 Init",
+        "numLines": 174,
+        "startLine": 1,
+        "totalLines": 174
+      }
+    },
+    "tool_use_id": "toolu_01RrTNUvvUrnzEvXCU6XazsB"
+  },
+  "SessionStart": {
+    "session_id": "test-session-001",
+    "transcript_path": "/tmp/transcript",
+    "cwd": "C:/Users/test/project",
+    "hook_event_name": "SessionStart",
+    "source": "resume"
+  }
+}

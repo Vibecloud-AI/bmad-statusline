@@ -1,0 +1,37 @@
+{
+  "separator": "modere",
+  "customSeparator": null,
+  "lines": [
+    {
+      "widgets": ["bmad-project", "bmad-workflow", "bmad-progressstep"],
+      "widgetOrder": ["bmad-project", "bmad-workflow", "bmad-step", "bmad-nextstep", "bmad-progress", "bmad-progressbar", "bmad-progressstep", "bmad-story", "bmad-timer"],
+      "colorModes": {
+        "bmad-project": { "mode": "fixed", "fixedColor": "cyan" },
+        "bmad-workflow": { "mode": "dynamic" },
+        "bmad-progressstep": { "mode": "fixed", "fixedColor": "brightCyan" }
+      }
+    },
+    {
+      "widgets": ["bmad-story", "bmad-timer"],
+      "widgetOrder": ["bmad-project", "bmad-workflow", "bmad-step", "bmad-nextstep", "bmad-progress", "bmad-progressbar", "bmad-progressstep", "bmad-story", "bmad-timer"],
+      "colorModes": {
+        "bmad-story": { "mode": "fixed", "fixedColor": "magenta" },
+        "bmad-timer": { "mode": "fixed", "fixedColor": "brightBlack" }
+      }
+    },
+    { "widgets": [], "widgetOrder": ["bmad-project", "bmad-workflow", "bmad-step", "bmad-nextstep", "bmad-progress", "bmad-progressbar", "bmad-progressstep", "bmad-story", "bmad-timer"], "colorModes": {} }
+  ],
+  "presets": [
+    {
+      "name": "dev-focus",
+      "widgets": ["bmad-project", "bmad-workflow", "bmad-progressstep"],
+      "colorModes": {
+        "bmad-project": { "mode": "fixed", "fixedColor": "cyan" },
+        "bmad-workflow": { "mode": "dynamic" },
+        "bmad-progressstep": { "mode": "fixed", "fixedColor": "brightCyan" }
+      }
+    },
+    null,
+    null
+  ]
+}

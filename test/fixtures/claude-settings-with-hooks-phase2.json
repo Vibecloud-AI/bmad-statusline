@@ -1,0 +1,25 @@
+{
+  "permissions": {},
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Skill",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"~/.config/bmad-statusline/bmad-hook.js\""
+          }
+        ]
+      },
+      {
+        "matcher": "Read",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"~/.config/bmad-statusline/bmad-hook.js\""
+          }
+        ]
+      }
+    ]
+  }
+}

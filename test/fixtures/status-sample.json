@@ -1,0 +1,18 @@
+{
+  "session_id": "test-session-123",
+  "project": "Toulou",
+  "skill": "bmad-dev-story",
+  "workflow": "dev-story",
+  "story": "1-2-install-command",
+  "story_priority": null,
+  "step": {
+    "current": 4,
+    "current_name": "Implement task",
+    "next": 5,
+    "next_name": "Author tests",
+    "total": 6,
+    "track": "-c"
+  },
+  "started_at": "2026-03-28T14:00:00.000Z",
+  "updated_at": "2026-03-28T14:30:00.000Z"
+}
